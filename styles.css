@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css?family=McLaren|Titillium+Web&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Nunito&display=swap');
+
+
+
+
+
+body {   
+    background: url('background.jpg');
+    margin: 0;
+
+}
+
+.general_wrapper {
+    display: flex;
+    flex-direction: row;
+}
+
+.setting_menu {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 8px;
+    min-width: 20vw;
+    height: 110%;
+    position: fixed;
+    left: -19%;
+    background-color: rgba(255, 127, 80, 0.6);
+    font-family: 'Nunito', sans-serif;
+    font-size: 1.2em;
+    transition: 0.8s ease;
+    
+}
+
+.setting_menu__hovered {
+    left: 0;
+    transition: 0.8s ease;
+    offset: 100ms;
+}
+
+.setting_menu__heading {
+    display: flex;
+    flex-direction: row;  
+}
+
+.wrapper {
+    display: grid;
+    text-align: center;
+    padding: 12px;
+    margin: auto;
+    width: 100%;
+}
+
+.main_heading {
+    color: coral;
+    font-family: 'Titillium Web', sans-serif;
+    font-family: 'McLaren', cursive;
+    text-shadow: black;
+}
+
+.main_menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    
+}
+
+.main_button {
+    background-color: white;
+    text-decoration: none;
+    font-family: 'Nunito', sans-serif;
+    font-size: 1em;
+    color: black;
+    font-weight: 900;
+    padding: 12px;
+    margin: 12px;
+    border-style: solid;
+    border-color: black;
+    border-radius: 9px;
+}
+
+.main_button:hover {
+    background-color: coral;
+    
+}
+
+.main_button:active {
+    background-color: coral; 
+}
+
+.grammar_exercises_listing {
+    display: flex;
+    flex-direction: column;
+}
+
+.list_item {
+    text-decoration: none;
+    font-family: 'Nunito', sans-serif;
+    font-size: 1.5em;
+    color: black;
+    font-weight: 900;
+
+}
+
+.list_item:hover {
+    color: coral;
+}
+
+.list_item:active {
+    color: coral;
+}
+
+.backarrow {
+    text-decoration: none;
+    color: black;
+    font-size: 2.5em;
+    text-align: right;
+    margin-right: 10%;
+}
+
+.backarrow:hover {
+    color: coral;
+}
+
+.backarrow:active {
+    color: coral;
+}
+
+@media screen and (max-width: 768px) {
+
+    .setting_menu {
+        min-width: 40vw;
+        left: -35%;
+        background-color: rgba(255, 127, 80);
+        z-index: 2;
+    }
+
+    .setting_menu__hovered {
+        left: 0;
+       
+    }
+
+    .wrapper {
+        position: relative;
+        left: 3.8vw;
+    }
+
+}
