@@ -35,7 +35,6 @@ body {
 .setting_menu__hovered {
     left: 0;
     transition: 0.8s ease;
-    offset: 100ms;
 }
 
 .setting_menu__heading {
