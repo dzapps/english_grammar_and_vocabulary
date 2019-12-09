@@ -1,0 +1,97 @@
+[1mdiff --git a/grammar.html b/grammar.html[m
+[1mindex 4da1a6a..991017d 100644[m
+[1m--- a/grammar.html[m
+[1m+++ b/grammar.html[m
+[36m@@ -8,6 +8,19 @@[m
+     <link href="styles.css" rel="stylesheet">[m
+ </head>[m
+ <body>[m
+[32m+[m[32m        <div class="general_wrapper">[m
+[32m+[m[32m                <div class="setting_menu">[m
+[32m+[m[32m                <div class="setting_menu__heading">[m
+[32m+[m[32m                    <div>MENU</div>[m
+[32m+[m[32m                    <div style="margin-left: auto;">[m
+[32m+[m[32m                    <img src="../img/Cog.svg">[m
+[32m+[m[32m                    </div> <br><br><br><br>[m
+[32m+[m[32m                </div>[m
+[32m+[m[32m                <label>Główna</label>[m
+[32m+[m[32m                <label>Motyw</label>[m
+[32m+[m[32m                <label>Legenda</label>[m
+[32m+[m[32m                <label>Pomoc</label>[m
+[32m+[m[32m                </div>[m
+     <div class="wrapper">[m
+     <h1 class="main_heading">Please choose an exercise:</h1><br>[m
+     <div class="grammar_exercises_listing">[m
+[36m@@ -17,6 +30,7 @@[m
+     </div> <br><br><br>[m
+     <a class="backarrow" href="index.html" title="Go back to the main menu">&#8617;</a>[m
+ </div>[m
+[31m-    [m
+[32m+[m[32m</div>[m
+[32m+[m[32m<script src="main.js"></script>[m
+ </body>[m
+ </html>[m
+\ No newline at end of file[m
+[1mdiff --git a/index.html b/index.html[m
+[1mindex babdc7c..f9ebd30 100644[m
+[1m--- a/index.html[m
+[1m+++ b/index.html[m
+[36m@@ -12,7 +12,9 @@[m
+     <div class="setting_menu">[m
+     <div class="setting_menu__heading">[m
+         <div>MENU</div>[m
+[31m-        <div style="margin-left: auto;">&#9881;</div> <br><br><br><br>[m
+[32m+[m[32m        <div style="margin-left: auto;">[m
+[32m+[m[32m        <img src="/img/Cog.svg" style="width: 2em; height: 2em;" alt="Settings cog">[m
+[32m+[m[32m        </div> <br><br><br><br>[m
+     </div>[m
+     <label>Główna</label>[m
+     <label>Motyw</label>[m
+[36m@@ -35,5 +37,10 @@[m
+     <p class="searchResults"></p>[m
+ </div>[m
+     <script src="main.js"></script>[m
+[32m+[m[32m    <script src="search.js"></script>[m
+ </body>[m
+[32m+[m[32m<footer style="text-align: right; padding: 5px;">[m
+[32m+[m[32m    Resources used: <br>[m
+[32m+[m[32m    <a target="_blank" href="/icons/set/settings--v1">Settings icon</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>[m
+[32m+[m[32m</footer>[m
+ </html>[m
+\ No newline at end of file[m
+[1mdiff --git a/main.js b/main.js[m
+[1mindex ff0b0ca..9459c90 100644[m
+[1m--- a/main.js[m
+[1m+++ b/main.js[m
+[36m@@ -1,19 +1,3 @@[m
+[31m-/*Search function*/[m
+[31m-[m
+[31m-const searchField = document.querySelector('.searchField');[m
+[31m-const searchButton = document.querySelector('.searchButton');[m
+[31m-let searchFieldString = String(searchField.value);[m
+[31m-let searchResults = document.querySelector('.searchResults');[m
+[31m-let grammarExercises = ['Where is it?', 'What is this?', 'I see it. It\'s here'];  [m
+[31m-[m
+[31m-[m
+[31m-searchButton.onclick = function() { [m
+[31m-    for (let i = 0; i < grammarExercises.length; i++) {[m
+[31m-    if (searchFieldString === grammarExercises.values[i])[m
+[31m-    {searchResults.innerHTML = grammarExercises[i];}[m
+[31m-      };[m
+[31m-};[m
+[31m-[m
+ /*Side-menu hover animation*/[m
+ [m
+ const settingMenu = document.querySelector('.setting_menu');[m
+[1mdiff --git a/styles.css b/styles.css[m
+[1mindex b68e06b..e4d4ba0 100644[m
+[1m--- a/styles.css[m
+[1m+++ b/styles.css[m
+[36m@@ -35,7 +35,6 @@[m [mbody {[m
+ .setting_menu__hovered {[m
+     left: 0;[m
+     transition: 0.8s ease;[m
+[31m-    offset: 100ms;[m
+ }[m
+ [m
+ .setting_menu__heading {[m

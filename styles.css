@@ -24,7 +24,7 @@ body {
     min-width: 20vw;
     height: 110%;
     position: fixed;
-    left: -19%;
+    left: -18%;
     background-color: rgba(255, 127, 80, 0.6);
     font-family: 'Nunito', sans-serif;
     font-size: 1.2em;
@@ -40,6 +40,11 @@ body {
 .setting_menu__heading {
     display: flex;
     flex-direction: row;  
+}
+
+.setting_menu--icon {
+    width: 32px;
+    height:32px;
 }
 
 .wrapper {
@@ -125,11 +130,20 @@ body {
     color: coral;
 }
 
+/* Individual exercise page */
+
+.exercise_main {
+    line-height: 2em;
+}
+
+
+
+
 @media screen and (max-width: 768px) {
 
     .setting_menu {
         min-width: 40vw;
-        left: -35%;
+        left: -30%;
         background-color: rgba(255, 127, 80);
         z-index: 2;
     }
